@@ -5,6 +5,10 @@
   "scripts": {
     "start": "node index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://https://github.com/ilhomparisi/blank.git"
+  },
   "keywords": [],
   "author": "ilhomaka",
   "license": "ISC",
