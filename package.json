@@ -1,0 +1,12 @@
+{
+  "name": "create-blank",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "ilhomaka",
+  "license": "ISC",
+  "description": "Very very simple Node.js starter pack"
+}
