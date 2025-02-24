@@ -1,7 +1,10 @@
 {
   "name": "create-blank",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "index.js",
+  "bin": {
+    "create-blank": "setup.js"
+  },
   "scripts": {
     "start": "node index.js"
   },
@@ -9,7 +12,8 @@
     "type": "git",
     "url": "git+https://github.com/ilhomparisi/blank.git"
   },
-  "keywords": [],
+  "keywords": ["create", "starter", "pnpm-create"],
+  "preferGlobal": true,
   "author": "ilhomaka",
   "license": "ISC",
   "description": "Very very simple Node.js starter pack"
