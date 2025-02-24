@@ -15,6 +15,7 @@ function askForProjectName() {
   return new Promise((resolve) => {
     rl.question("Enter project name: ", (name) => {
       rl.close();
+      process.stdin.destroy();
       resolve(name.trim() || "sample-project");
     });
   });
