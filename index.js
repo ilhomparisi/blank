@@ -63,6 +63,5 @@ function askForProjectName() {
   console.log(`✅ Project "${folderName}" created successfully!`);
   console.log("📂 Now run:");
   console.log(`   cd ${folderName}`);
-  rl.close();
   process.exit(0);
 })();
