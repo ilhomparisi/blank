@@ -4,28 +4,28 @@ import { writeFileSync, mkdirSync, existsSync } from "fs";
 import { join } from "path";
 import readline from "readline";
 
+
+(async () => {
 // Setup CLI prompt
 const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
+    input: process.stdin,
+    output: process.stdout,
+  });
+
 
 // Function to prompt for project name if not provided
 function askForProjectName() {
+
   return new Promise((resolve) => {
     rl.question("Enter project name: ", (name) => {
-      rl.close();
       resolve(name.trim() || "sample-project");
     });
   });
 }
 
-(async () => {
+
   // Get project name from CLI args or ask user
   const folderName = process.argv[2] || (await askForProjectName());
-
-  // Ensure readline is properly closed
-  rl.close();
 
   // Target project directory
   const targetPath = join(process.cwd(), folderName);
@@ -63,4 +63,6 @@ function askForProjectName() {
   console.log(`✅ Project "${folderName}" created successfully!`);
   console.log("📂 Now run:");
   console.log(`   cd ${folderName}`);
+  rl.close();
+  process.exit(0);
 })();
